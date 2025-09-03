@@ -1,0 +1,451 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+/* Universal Styles */
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Container: Background with gradient */
+/* Container: Background with green gradient and centered image */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    background: linear-gradient(rgba(0, 122, 43, 0.3), rgba(0, 122, 43, 0.3)),
+                url(../res/knslogo.png);
+                background-size: auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                
+}
+
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin: 1rem;
+    color: #f1f1f1;
+}
+
+/* Header */
+.header {
+    height: 2.5rem; /* Reduced from 3rem */
+    overflow: auto;
+    background: #007A2B;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+
+.header:hover {
+    background: #006622;
+}
+
+.header .menu-bar,
+.header .logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    float: left;
+    cursor: pointer;
+}
+
+.header .logo {
+    margin-top: 0.75rem;
+}
+
+.header #hide {
+    display: none;
+}
+
+.header .profile {
+    float: right;
+    margin-right: 1rem;
+}
+
+.header .profile img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 2px;
+    float: left;
+    cursor: pointer;
+}
+
+.header .profile label {
+    float: right;
+    margin-top: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Side Menu */
+#menu {
+    width: 0;
+    height: 100%;
+    background: #28a745;
+    overflow: auto;
+    color: #ffffff;
+    position: fixed;
+    transition: width 0.5s;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#menu .menu-header {
+    background: #1e7e34;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.menu-item,
+.menu-item a {
+    padding: 4px 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: large;
+    font-weight: 900;
+    display: block;
+}
+
+.menu-item a {
+    margin: 1rem;
+}
+
+/* Main Area */
+#main {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    float: right;
+}
+
+/* Info Boxes */
+#main .info-box {
+    height: 10rem;
+    width: 18rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: 100% 100%;
+    color: white;
+    float: left;
+    animation: fadeInUp 0.6s ease;
+}
+
+.info-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.info-box h1,
+.info-box h3 {
+    margin: 1rem;
+}
+
+/* Gradient Info Box Backgrounds */
+#box1 {
+    background-image: linear-gradient(rgba(108, 16, 184, 0.9), rgba(108, 16, 184, 0.9)), url('../res/users-solid.svg');
+}
+
+#box2 {
+    background-image: linear-gradient(rgba(65, 105, 225, 0.9), rgba(65, 105, 225, 0.9)), url('../res/black-tie-brands.svg');
+}
+
+#box3 {
+    background-image: linear-gradient(rgba(229, 233, 20, 0.9), rgba(229, 233, 20, 0.9)), url('../res/check-to-slot-solid.svg');
+}
+
+#box4 {
+    background-image: linear-gradient(rgba(255, 99, 71, 0.9), rgba(255, 99, 71, 0.9)), url('../res/pen-to-square-solid.svg');
+}
+
+/* Add Button */
+.add-btn {
+    float: left;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    background: #2d6a4f;
+    color: white;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+    background: #1b4e33;
+    transform: translateY(-2px);
+}
+
+/* Table */
+.table {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 5rem;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 3px gray, -2px -2px 3px gray;
+}
+
+.table td {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.table img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.table tr:nth-child(even) {
+    background-color: rgba(0, 122, 43, 0.05);
+}
+
+.table .vote:checked~.check {
+    color: #0a5f18;
+    font-size: 2rem;
+    display: inline;
+}
+
+.table .check {
+    display: none;
+}
+
+.table .vote {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Edit & Delete Buttons */
+.del,
+.edit {
+    padding: 4px 10px;
+    margin: 2px;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.del {
+    background: #dc3545;
+}
+
+.edit {
+    background: #28a745;
+}
+
+.del:hover,
+.edit:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Form */
+.form {
+    color: #666;
+    width: 360px;
+    margin: auto;
+    margin-bottom: 10rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 3px 3px 3px #a2a2a2, -3px -3px 3px #a2a2a2;
+    animation: fadeInUp 0.6s ease;
+}
+
+.form .req_symbol {
+    color: tomato;
+}
+
+.form .input,
+.form .button {
+    font-size: 15px;
+    padding: 4px;
+    width: 85%;
+    margin: 1rem;
+}
+
+.form .label {
+    display: block;
+    font-weight: bolder;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.form .radio {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.button {
+    background: #28a745;
+    border: 1px solid #28a745;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    display: block;
+    height: 2rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.form h4 {
+    text-align: center;
+    margin: 1rem;
+    color: #333;
+    font-family: Garamond, serif;
+    font-size: xx-large;
+}
+
+.form .link1 {
+    margin: 1rem;
+    text-align: center;
+}
+
+.form .link1 a {
+    color: #007a2b;
+    text-decoration: none;
+}
+
+.form .link1 a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Panel */
+#profile-panel {
+    height: 0rem;
+    width: 18rem;
+    overflow: hidden;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    right: 2rem;
+    top: 4rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px gainsboro, -2px -2px 2px rgb(238, 236, 236);
+    transition: 0.5s;
+}
+
+#profile-panel:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+#profile-panel img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin: 1rem 0 1rem 2rem;
+}
+
+#profile-panel .link {
+    margin: 2rem 0;
+}
+
+#profile-panel .link a {
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.fa-circle-xmark {
+    float: right;
+    margin: 1rem;
+    color: red;
+    font-size: large;
+    cursor: pointer;
+}
+
+/* Result Box */
+.result-box {
+    width: 98%;
+    margin: auto;
+    margin-bottom: 5rem;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: auto;
+}
+
+.result-box .result {
+    width: 45%;
+    float: left;
+    margin: 1.8rem;
+    border: 1px solid #000;
+    background: #fff;
+    box-shadow: 2px 2px 3px gray, -2px -2px 5px gray;
+}
+
+.result-box .myChart {
+    margin: 2rem 0;
+}
+
+.result-title {
+    color: #000;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* About Section */
+.show-about {
+    width: 80%;
+    margin: auto;
+    font-size: large;
+    text-align: center;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .info-box,
+    .form,
+    .result-box .result {
+        width: 90%;
+        float: none;
+        margin: 1rem auto;
+    }
+
+    .header .menu-bar {
+        font-size: 1.1rem; /* Reduced from 1.4rem */
+        font-weight: 700;  /* Optional: less bold for cleaner look */
+        margin-left: 0.3rem; /* Reduced margin */
+        margin-top: 0.3rem;  /* Reduced margin */
+        float: left;
+        cursor: pointer;
+    }
+    
+    .header .logo {
+        font-size: 1rem;
+    }
+}
